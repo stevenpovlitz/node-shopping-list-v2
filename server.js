@@ -59,6 +59,7 @@ app.post('/recipes', jsonParser, (req, res) => {
   });
 
   const item = Recipes.create(req.body.name, req.body.ingredients);
+  res.status(201).json(item);
 });
 
 app.get('/recipes', (req, res) => {
